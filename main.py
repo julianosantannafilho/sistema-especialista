@@ -23,39 +23,59 @@ def choose_car_category():
         "Você gosta do estilo picape?(s/n)"
 
     ]
-    
-    answers = []
-    for i, question in enumerate(questions_offroad):
-        answer = input(question).strip().lower()
-        answers.append(answer)
 
-        if i == 0:
-            if answer == 's':
-                score['aventureiro compacto'] += 1
-                score['picape compacta'] += 1
-                score['picape média'] += 1
-                score['picape grande'] += 1
-                score['jipe'] += 1
-        elif i == 1:
-            if answer == 's':
-                score['jipe'] += 1
-        elif i == 2:
-            if answer == 's':
-                score['aventureiro compacto'] += 1
-                score['picape compacta'] += 1
-                score['picape média'] += 1
-        elif i == 3:
-            if answer == 's':
-                score['picape média'] += 1
-                score['picape grande'] += 1
-        elif i == 4:
-            if answer == 's':
-                score['aventureiro compacto'] += 1
-        elif i == 5:
-            if answer == 's':
-                score['picape compacta'] += 1
-                score['picape média'] += 1
-                score['picape grande'] += 1
+    questions_asphalt = [
+        "Você prefere um carro esportivo?",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+    ]
+    def process_questions(questions, is_offroad):
+        answers = []
+        for i, question in enumerate(questions_offroad):
+            answer = input(question).strip().lower()
+            answers.append(answer)
+            if is_offroad:
+                if i == 0:
+                    if answer == 's':
+                        score['aventureiro compacto'] += 1
+                        score['picape compacta'] += 1
+                        score['picape média'] += 1
+                        score['picape grande'] += 1
+                        score['jipe'] += 1
+                elif i == 1:
+                    if answer == 's':
+                        score['jipe'] += 1
+                elif i == 2:
+                    if answer == 's':
+                        score['aventureiro compacto'] += 1
+                        score['picape compacta'] += 1
+                        score['picape média'] += 1
+                elif i == 3:
+                    if answer == 's':
+                        score['picape média'] += 1
+                        score['picape grande'] += 1
+                elif i == 4:
+                    if answer == 's':
+                        score['aventureiro compacto'] += 1
+                elif i == 5:
+                    if answer == 's':
+                        score['picape compacta'] += 1
+                        score['picape média'] += 1
+                        score['picape grande'] += 1
+            else:
+                if 
 
     chosen_category = max(score, key = score.get)
 
