@@ -181,7 +181,7 @@ def choose_car_category():
                     score['suv médio'] += 1
                     score['suv grande'] += 1
                     score['furgão compacto'] += 1
-                    score['furgão grande'] += 1
+                    score['furgão médio'] += 1
                 elif i == 14 and answer == 's':
                     score['sedã grande'] += 1
                     score['familiar grande'] += 1
@@ -198,7 +198,7 @@ def choose_car_category():
                     score['esportivo grande'] += 1
                     score['conversível grande'] += 1
                 elif i == 17 and answer == 's':
-                    score['s uv compacto'] += 1
+                    score['suv compacto'] += 1
                     score['suv médio'] += 1
                     score['suv grande'] += 1
                 elif i == 18 and answer == 's':
