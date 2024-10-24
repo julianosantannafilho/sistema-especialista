@@ -1,6 +1,5 @@
 def choose_car_category():
     score = {
-        'aventureiro compacto': 0,
         'hatch subcompacto': 0, 'hatch compacto': 0, 'hatch médio': 0,
         'sedã compacto': 0, 'sedã médio': 0, 'sedã grande': 0,
         'familiar compacto': 0, 'familiar médio': 0, 'familiar grande': 0,
@@ -19,7 +18,6 @@ def choose_car_category():
         "Vai ser usado para trilhas e terrenos extremos?(s/n)",
         "Dinheiro ou conveniência é um problema?(s/n)",
         "É necessário grande capacidade de carga?(s/n)",
-        "Há necessidade de no mínimo 4 lugares?(s/n)",
         "Você gosta do estilo picape?(s/n)"
     ]
 
@@ -52,7 +50,6 @@ def choose_car_category():
             answer = input(question).strip().lower()
             if is_offroad:
                 if i == 0 and answer == 's':
-                    score['aventureiro compacto'] += 1
                     score['picape compacta'] += 1
                     score['picape média'] += 1
                     score['picape grande'] += 1
@@ -60,15 +57,12 @@ def choose_car_category():
                 elif i == 1 and answer == 's':
                     score['jipe'] += 1
                 elif i == 2 and answer == 's':
-                    score['aventureiro compacto'] += 1
                     score['picape compacta'] += 1
                     score['picape média'] += 1
                 elif i == 3 and answer == 's':
                     score['picape média'] +=  1
                     score['picape grande'] += 1
                 elif i == 4 and answer == 's':
-                    score['aventureiro compacto'] += 1
-                elif i == 5 and answer == 's':
                     score['picape compacta'] += 1
                     score['picape média'] += 1
                     score['picape grande'] += 1
